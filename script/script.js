@@ -9,12 +9,12 @@ let maxSpendingValue = 0;
 let maxSpendingDay = "";
 let maxSpendingIndex = 0;
 
-async function getData() {
-	const res = await fetch("./data.json");
-	const data = await res.json();
-	setData(data);
-	console.log(data);
-}
+// async function getData() {
+// 	const res = await fetch("./data.json");
+// 	const data = await res.json();
+// 	setData(data);
+// 	console.log(data);
+// }
 
 function setAmount() {
 	for (let i = 0; i < amount.length; i++) {
