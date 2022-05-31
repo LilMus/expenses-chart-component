@@ -10,7 +10,7 @@ let maxSpendingDay = "";
 let maxSpendingIndex = 0;
 
 async function getData() {
-	const res = await fetch("../data.json");
+	const res = await fetch("./data.json");
 	const data = await res.json();
 	setData(data);
 	console.log(data);
