@@ -1,5 +1,5 @@
-const days = ["a", "b", "a", "b", "a", "b", "a"];
-const amount = [1, 2, 3, 4, 5, 6, 7];
+const days = [];
+const amount = [];
 const chartSpendingsValue = document.getElementsByClassName(
 	"chart-spendings-value"
 );
@@ -9,12 +9,12 @@ let maxSpendingValue = 0;
 let maxSpendingDay = "";
 let maxSpendingIndex = 0;
 
-// async function getData() {
-// 	const res = await fetch("./data.json");
-// 	const data = await res.json();
-// 	setData(data);
-// 	console.log(data);
-// }
+async function getData() {
+	const res = await fetch("data.json");
+	const data = await res.json();
+	setData(data);
+	console.log(data);
+}
 
 function setAmount() {
 	for (let i = 0; i < amount.length; i++) {
@@ -92,8 +92,8 @@ function setData(datas) {
 		days.push(data.day);
 		amount.push(data.amount);
 	}
-	// setAmount();
-	// setDays();
+	setAmount();
+	setDays();
 	lookForMaxSpending();
 	colorMaxSpendingBar();
 	setBarsHeight();
