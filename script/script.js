@@ -10,10 +10,9 @@ let maxSpendingDay = "";
 let maxSpendingIndex = 0;
 
 async function getData() {
-	const res = await fetch("data.json");
+	const res = await fetch("../data.json");
 	const data = await res.json();
 	setData(data);
-	console.log(data);
 }
 
 function setAmount() {
@@ -81,7 +80,6 @@ function setBarsHeight() {
 	for (value of amount) {
 		ratio = value / maxSpendingValue;
 		barHeight = ratio * 180;
-		console.log(barHeight);
 		bars[i].style.height = `${barHeight}px`;
 		i++;
 	}
