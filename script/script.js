@@ -1,5 +1,5 @@
-const days = [];
-const amount = [];
+const days = ["a", "b", "a", "b", "a", "b", "a"];
+const amount = [1, 2, 3, 4, 5, 6, 7];
 const chartSpendingsValue = document.getElementsByClassName(
 	"chart-spendings-value"
 );
@@ -92,8 +92,8 @@ function setData(datas) {
 		days.push(data.day);
 		amount.push(data.amount);
 	}
-	setAmount();
-	setDays();
+	// setAmount();
+	// setDays();
 	lookForMaxSpending();
 	colorMaxSpendingBar();
 	setBarsHeight();
