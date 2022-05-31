@@ -13,6 +13,7 @@ async function getData() {
 	const res = await fetch("../data.json");
 	const data = await res.json();
 	setData(data);
+	console.log(data);
 }
 
 function setAmount() {
